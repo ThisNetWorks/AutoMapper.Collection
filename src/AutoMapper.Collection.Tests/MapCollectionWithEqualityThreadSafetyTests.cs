@@ -2,11 +2,13 @@
 using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
+using Xunit;
 
 namespace AutoMapper.Collection
 {
     public class MapCollectionWithEqualityThreadSafetyTests
     {
+        [Fact]
         public async Task Should_Work_When_Initialized_Concurrently()
         {
             Action act = () =>
